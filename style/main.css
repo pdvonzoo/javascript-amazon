@@ -21,6 +21,9 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+body {
+  min-width: 100rem;
+}
 .contents-wrapper {
   min-width: 100rem;
   max-width: 140rem;
