@@ -21,8 +21,10 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
-body {
-  min-width: 110rem; }
+.contents-wrapper {
+  min-width: 100rem;
+  max-width: 140rem;
+  margin: 0 auto; }
 
 a {
   color: #fff; }
@@ -527,6 +529,8 @@ html {
     margin: auto;
     padding: .2rem 1.8rem 0 .5rem; }
   .header__nav {
+    overflow: hidden;
+    white-space: nowrap;
     align-self: end;
     padding-bottom: .3rem; }
   .header__tools {
@@ -849,6 +853,12 @@ html {
       grid-template-columns: 7.2rem 91.1rem 7.2rem;
       grid-gap: 1.4rem;
       justify-content: center; }
+      @media only screen and (max-width: 1200px) {
+        .prime-detail__container .carousel {
+          width: 96rem;
+          grid-gap: 3rem;
+          grid-template-columns: 7.2fr 91.1fr 7.2fr;
+          margin: 0 auto; } }
       .prime-detail__container .carousel__arrow-box {
         position: relative; }
         .prime-detail__container .carousel__arrow-box .arrow-icon {
@@ -869,6 +879,10 @@ html {
         height: 52px;
         display: inline-block;
         background-position: -53px 0px; }
+        @media only screen and (max-width: 1200px) {
+          .prime-detail__container .carousel__left .arrow-icon {
+            right: 0;
+            left: auto; } }
       .prime-detail__container .carousel__right .arrow-icon {
         right: 0;
         background-color: transparent;
@@ -884,12 +898,19 @@ html {
         height: 52px;
         display: inline-block;
         background-position: -53px -104px; }
+        @media only screen and (max-width: 1200px) {
+          .prime-detail__container .carousel__right .arrow-icon {
+            right: auto;
+            left: .2rem; } }
       .prime-detail__container .carousel__list {
         margin: 0 auto;
         height: 40rem;
-        width: 91.3rem; }
+        width: 100%; }
       .prime-detail__container .carousel__item {
         padding-top: 3rem; }
+        @media only screen and (max-width: 1200px) {
+          .prime-detail__container .carousel__item {
+            width: 77.4rem; } }
       .prime-detail__container .carousel__ship-1 {
         background: linear-gradient(to right, #FFF, #FFF 15px, rgba(255, 255, 255, 0) 45px), url(../images/Card_ship_01.jpg);
         background-position: center; }
@@ -940,6 +961,10 @@ html {
     height: 36.8rem;
     margin-top: 0rem;
     padding: 6rem 7rem 0; }
+    @media only screen and (max-width: 1200px) {
+      .prime-more--Video {
+        grid-template-columns: 1fr 58.9rem;
+        padding: 6rem 0rem 4.8rem .5rem; } }
     .prime-more--Video .carousel {
       display: grid;
       grid-template-columns: 4rem 28rem 4rem;
@@ -947,6 +972,9 @@ html {
       justify-content: center;
       padding-top: .8rem;
       padding-right: 1.7rem; }
+      @media only screen and (max-width: 1200px) {
+        .prime-more--Video .carousel {
+          padding-right: .9rem; } }
       .prime-more--Video .carousel__list {
         width: 100%;
         height: 100%;
