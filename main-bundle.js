@@ -1239,6 +1239,39 @@ module.exports = __webpack_require__.p + "images/video.jpg";
 
 /***/ }),
 
+/***/ "./src/images/video1.jpg":
+/*!*******************************!*\
+  !*** ./src/images/video1.jpg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/video1.jpg";
+
+/***/ }),
+
+/***/ "./src/images/video2.jpg":
+/*!*******************************!*\
+  !*** ./src/images/video2.jpg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/video2.jpg";
+
+/***/ }),
+
+/***/ "./src/images/video3.jpg":
+/*!*******************************!*\
+  !*** ./src/images/video3.jpg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/video3.jpg";
+
+/***/ }),
+
 /***/ "./src/index.html":
 /*!************************!*\
   !*** ./src/index.html ***!
@@ -1259,12 +1292,23 @@ module.exports = __webpack_require__.p + "index.html";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util_Helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/Helpers */ "./src/js/util/Helpers.js");
-/* harmony import */ var _components_Plans_PlansTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Plans/PlansTypes */ "./src/js/components/Plans/PlansTypes.js");
-/* harmony import */ var _components_Plans_Plans__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Plans/Plans */ "./src/js/components/Plans/Plans.js");
-/* harmony import */ var _util_Aop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util/Aop */ "./src/js/util/Aop.js");
-/* harmony import */ var _util_Type__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util/Type */ "./src/js/util/Type.js");
-/* harmony import */ var _util_typeCollection_defaultTypes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./util/typeCollection/defaultTypes */ "./src/js/util/typeCollection/defaultTypes.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Plans_PlansTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Plans/PlansTypes */ "./src/js/components/Plans/PlansTypes.js");
+/* harmony import */ var _components_Plans_Plans__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Plans/Plans */ "./src/js/components/Plans/Plans.js");
+/* harmony import */ var _util_Type__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./util/Type */ "./src/js/util/Type.js");
+/* harmony import */ var _util_typeCollection_defaultTypes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./util/typeCollection/defaultTypes */ "./src/js/util/typeCollection/defaultTypes.js");
+/* harmony import */ var _components_Carousel_CarouselTypes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Carousel/CarouselTypes */ "./src/js/components/Carousel/CarouselTypes.js");
+/* harmony import */ var _components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Carousel/Carousel */ "./src/js/components/Carousel/Carousel.js");
+/* harmony import */ var _util_Helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./util/Helpers */ "./src/js/util/Helpers.js");
+
+
+
+
 
 
 
@@ -1272,14 +1316,276 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  var aop = new _util_Aop__WEBPACK_IMPORTED_MODULE_3__["Aop"]();
-  var type = new _util_Type__WEBPACK_IMPORTED_MODULE_4__["Type"](aop);
-  var helpers = new _util_Helpers__WEBPACK_IMPORTED_MODULE_0__["Helpers"]();
-  var plans = new _components_Plans_Plans__WEBPACK_IMPORTED_MODULE_2__["Plans"](helpers);
-  type.addDefinition(_util_typeCollection_defaultTypes__WEBPACK_IMPORTED_MODULE_5__["defaultTypes"]);
-  new _components_Plans_PlansTypes__WEBPACK_IMPORTED_MODULE_1__["PlansTypes"](plans, type);
-  plans.init();
+  var type = new _util_Type__WEBPACK_IMPORTED_MODULE_5__["Type"]();
+  var plans = new _components_Plans_Plans__WEBPACK_IMPORTED_MODULE_4__["Plans"]();
+  var carousel = new _components_Carousel_Carousel__WEBPACK_IMPORTED_MODULE_8__["Carousel"]({
+    delay: 3000
+  });
+  new App(type, plans, carousel);
 });
+
+var App =
+/*#__PURE__*/
+function () {
+  function App(type, plans, carousel) {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, App);
+
+    this.addDefinition(type).checkType(plans, carousel, type).initPlans(plans).initCarousel(carousel);
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(App, [{
+    key: "addDefinition",
+    value: function addDefinition(type) {
+      type.addDefinition(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(_util_typeCollection_defaultTypes__WEBPACK_IMPORTED_MODULE_6__["defaultTypes"]));
+      return this;
+    }
+  }, {
+    key: "checkType",
+    value: function checkType(plans, carousel, type) {
+      new _components_Plans_PlansTypes__WEBPACK_IMPORTED_MODULE_3__["PlansTypes"](plans, type);
+      new _components_Carousel_CarouselTypes__WEBPACK_IMPORTED_MODULE_7__["CarouselTypes"](carousel, type);
+      return this;
+    }
+  }, {
+    key: "initPlans",
+    value: function initPlans(plans) {
+      var plansEls = {
+        stickyNav: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])('.fixed-nav'),
+        stickyNavCover: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$All"])('.fixed-nav__cover'),
+        frontCover: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])(".fixed-nav__cover--front"),
+        submitCover: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])(".fixed-nav__cover--submit"),
+        open: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$All"])("[data-open=fixedNav]"),
+        close: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$All"])("[data-close=fixedNav]"),
+        header: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])(".header"),
+        aboutBtn: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])(".submit-box__submit")
+      };
+      var target = {
+        headerBottom: plansEls.header.offsetHeight,
+        fixPoint: plansEls.aboutBtn.offsetTop + plansEls.aboutBtn.offsetHeight
+      };
+      plans.setEvent(plansEls, target);
+      return this;
+    }
+  }, {
+    key: "initCarousel",
+    value: function initCarousel(carousel) {
+      var els = {
+        nextBtn: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])('#exploreVideoNext'),
+        prevBtn: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])('#exploreVideoPrev'),
+        slides: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])('#exploreVideo').children,
+        heading: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])('#c-heading'),
+        paragraph: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_9__["$"])('#c-paragraph')
+      };
+      var httpMethod = "get",
+          url = "./data/data.json";
+      carousel.render({
+        httpMethod: httpMethod,
+        url: url,
+        els: els
+      });
+    }
+  }]);
+
+  return App;
+}();
+
+/***/ }),
+
+/***/ "./src/js/components/Carousel/Carousel.js":
+/*!************************************************!*\
+  !*** ./src/js/components/Carousel/Carousel.js ***!
+  \************************************************/
+/*! exports provided: Carousel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Carousel", function() { return Carousel; });
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util_Helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util/Helpers */ "./src/js/util/Helpers.js");
+/* harmony import */ var _util_ajax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/ajax */ "./src/js/util/ajax.js");
+
+
+
+
+
+var Carousel =
+/*#__PURE__*/
+function () {
+  function Carousel(_ref) {
+    var delay = _ref.delay;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Carousel);
+
+    this.H = new _util_Helpers__WEBPACK_IMPORTED_MODULE_2__["Helpers"]();
+    this.pNum = 0;
+    this.timeoutId = 0;
+    this.delay = delay;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Carousel, [{
+    key: "setEvent",
+    value: function setEvent(data, els) {
+      var _this = this;
+
+      els.nextBtn.addEventListener('click', function () {
+        return _this.controlSlides(data, els, 'next');
+      });
+      els.prevBtn.addEventListener('click', function () {
+        return _this.controlSlides(data, els, 'previous');
+      });
+      return this;
+    }
+  }, {
+    key: "runAutoMove",
+    value: function runAutoMove(data, els) {
+      var _this2 = this;
+
+      this.controlSlides(data, els);
+      this.timeoutId = setTimeout(function () {
+        return _this2.runAutoMove(data, els);
+      }, this.delay);
+      return this;
+    }
+  }, {
+    key: "controlSlides",
+    value: function controlSlides(data, els) {
+      var direction = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'next';
+      var i = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+      clearTimeout(this.timeoutId);
+      this.setTextBox(data, els);
+      this.setPageNumber(els, direction);
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = els.slides[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var slide = _step.value;
+          slide.style.transform = "translateX(".concat(100 * (i - this.pNum), "%) translateY(").concat(-100 * i, "%)");
+          i++;
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return != null) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+
+      return this;
+    }
+  }, {
+    key: "setTextBox",
+    value: function setTextBox(data, els) {
+      els.heading.innerText = data[this.pNum].heading;
+      els.paragraph.innerText = data[this.pNum].paragraph;
+    }
+  }, {
+    key: "setPageNumber",
+    value: function setPageNumber(els, direction) {
+      var pNum = this.pNum;
+      var slidesNum = els.slides.length;
+
+      if (direction === 'next') {
+        pNum = pNum + 1 === slidesNum ? 0 : pNum + 1;
+      } else if (direction === 'previous') {
+        pNum = !pNum ? slidesNum - 1 : pNum - 1;
+      }
+
+      Math.abs(this.pNum - pNum) > 1 ? this.H.removeClass(els.slides, 'transition') : this.H.addClass(els.slides, 'transition');
+      this.pNum = pNum;
+      return this;
+    }
+  }, {
+    key: "render",
+    value: function render(_ref2) {
+      var _this3 = this;
+
+      var httpMethod = _ref2.httpMethod,
+          url = _ref2.url,
+          els = _ref2.els;
+      var parent = Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_2__["$"])('#exploreVideo');
+      var tagName = 'li';
+      var className = "carousel__item transition";
+      return Object(_util_ajax__WEBPACK_IMPORTED_MODULE_3__["ajax"])({
+        httpMethod: httpMethod,
+        url: url
+      }).then(function (res) {
+        res.forEach(function (data, i) {
+          var el = _this3.H.createEl(parent, tagName, className);
+
+          el.style.backgroundImage = "url(".concat(data.imgurl, ")");
+          el.style.transform = "translateX(".concat(100 * i, "%) translateY(").concat(-100 * i, "%)");
+        });
+        return res;
+      }).then(function (res) {
+        _this3.runAutoMove(res, els).setEvent(res, els);
+      });
+    }
+  }]);
+
+  return Carousel;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/js/components/Carousel/CarouselTypes.js":
+/*!*****************************************************!*\
+  !*** ./src/js/components/Carousel/CarouselTypes.js ***!
+  \*****************************************************/
+/*! exports provided: CarouselTypes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CarouselTypes", function() { return CarouselTypes; });
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var CarouselTypes =
+/*#__PURE__*/
+function () {
+  function CarouselTypes(carousel, type) {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, CarouselTypes);
+
+    this.carousel = carousel;
+    this.type = type;
+    this.define(this.carousel);
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(CarouselTypes, [{
+    key: "define",
+    value: function define(targetObj) {
+      if (toString.call(targetObj) !== "[object Object]") throw new Error();
+      this.type.checkArgsTypes(targetObj, 'setEvent', ['array', 'object']);
+      this.type.checkArgsTypes(targetObj, 'runAutoMove', ['array', 'object']);
+      this.type.checkArgsTypes(targetObj, 'controlSlides', ['array', 'object', ['string', 'undefined'], ['number', 'undefined']]);
+      this.type.checkArgsTypes(targetObj, 'setPageNumber', ['object', 'string']);
+      return this;
+    }
+  }]);
+
+  return CarouselTypes;
+}();
+
+
 
 /***/ }),
 
@@ -1308,55 +1614,36 @@ __webpack_require__.r(__webpack_exports__);
 var Plans =
 /*#__PURE__*/
 function () {
-  function Plans(helpers) {
+  function Plans() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Plans);
 
-    this.helpers = helpers;
+    this.H = new _util_Helpers__WEBPACK_IMPORTED_MODULE_3__["Helpers"]();
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Plans, [{
-    key: "init",
-    value: function init() {
-      var els = {
-        stickyNav: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_3__["$"])('.fixed-nav'),
-        stickyNavCover: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_3__["$All"])('.fixed-nav__cover'),
-        frontCover: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_3__["$"])(".fixed-nav__cover--front"),
-        submitCover: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_3__["$"])(".fixed-nav__cover--submit"),
-        open: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_3__["$All"])("[data-open=fixedNav]"),
-        close: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_3__["$All"])("[data-close=fixedNav]"),
-        header: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_3__["$"])(".header"),
-        aboutBtn: Object(_util_Helpers__WEBPACK_IMPORTED_MODULE_3__["$"])(".submit-box__submit")
-      };
+    key: "setEvent",
+    value: function setEvent(els, target) {
+      var _this = this;
+
       var className = {
         active: 'active',
         clicked: 'clicked'
       };
-      var target = {
-        headerBottom: els.header.offsetHeight,
-        fixPoint: els.aboutBtn.offsetTop + els.aboutBtn.offsetHeight
-      };
-      var eachCoverEls = [els.submitCover, els.frontCover];
-      this.setEvent(this.helpers, els, className, target, eachCoverEls);
-    }
-  }, {
-    key: "setEvent",
-    value: function setEvent(helpers, els, className, target, eachCoverEls) {
-      var _this = this;
-
-      helpers.on(window, 'scroll', function (_) {
-        _this.setScrollEvent(els, window.scrollY, className.active, target);
+      var coverEls = [els.submitCover, els.frontCover];
+      this.H.on(window, 'scroll', function (_) {
+        _this.setScrollEvt(els, window.scrollY, className.active, target);
       });
-      helpers.on(els.open, 'click', function (_) {
-        helpers.addClass(eachCoverEls, className.clicked);
+      this.H.on(els.open, 'click', function (_) {
+        _this.H.addClass(coverEls, className.clicked);
       });
-      helpers.on(els.close, 'click', function (_) {
-        helpers.removeClass(eachCoverEls, className.clicked);
+      this.H.on(els.close, 'click', function (_) {
+        _this.H.removeClass(coverEls, className.clicked);
       });
       return this;
     }
   }, {
-    key: "setScrollEvent",
-    value: function setScrollEvent(els, currentTop, className, target) {
+    key: "setScrollEvt",
+    value: function setScrollEvt(els, currentTop, className, target) {
       this.controllStickyNav([].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(els.stickyNavCover), [els.stickyNav]), target.fixPoint, currentTop, className);
       this.controllStickyNav(els.stickyNavCover, target.fixPoint, currentTop, className);
       this.controllStickyNav(els.stickyNav, target.headerBottom, currentTop, className);
@@ -1365,7 +1652,7 @@ function () {
   }, {
     key: "controllStickyNav",
     value: function controllStickyNav(el, target, currentTop, className) {
-      currentTop > target ? this.helpers.addClass(el, className) : this.helpers.removeClass(el, className);
+      currentTop > target ? this.H.addClass(el, className) : this.H.removeClass(el, className);
       return this;
     }
   }]);
@@ -1409,9 +1696,9 @@ function () {
     key: "define",
     value: function define(targetObj) {
       if (toString.call(targetObj) !== "[object Object]") throw new Error();
-      this.type.checkArgs(targetObj, 'setEvent', ['object', 'object', 'object', 'object', 'array']);
-      this.type.checkArgs(targetObj, 'setScrollEvent', ['object', 'number', 'string', 'object']);
-      this.type.checkArgs(targetObj, 'controllStickyNav', [['NodeList', 'DOMElement', 'array'], 'number', 'number', 'string']);
+      this.type.checkArgsTypes(targetObj, 'setEvent', ['object']);
+      this.type.checkArgsTypes(targetObj, 'setScrollEvent', ['object', 'number', 'string', 'object']);
+      this.type.checkArgsTypes(targetObj, 'controllStickyNav', [['NodeList', 'DOMElement', 'array'], 'number', 'number', 'string']);
       return this;
     }
   }]);
@@ -1485,10 +1772,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "$", function() { return $; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "$All", function() { return $All; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Helpers", function() { return Helpers; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _typeCollection_defaultTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./typeCollection/defaultTypes */ "./src/js/util/typeCollection/defaultTypes.js");
+
+
 
 
 
@@ -1504,13 +1796,13 @@ var Helpers =
 /*#__PURE__*/
 function () {
   function Helpers() {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Helpers);
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Helpers);
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Helpers, [{
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Helpers, [{
     key: "addClass",
     value: function addClass(els, className) {
-      if (els instanceof HTMLElement) els = [els];
+      if (this.checkType("DOMElement", els)) els = [els];
       var _iteratorNormalCompletion = true;
       var _didIteratorError = false;
       var _iteratorError = undefined;
@@ -1518,7 +1810,7 @@ function () {
       try {
         for (var _iterator = els[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
           var el = _step.value;
-          if (!(el instanceof HTMLElement)) throw new Error();
+          if (!this.checkType("DOMElement", el)) throw new Error();
           if (el && !el.className.match(className)) el.className += ' ' + className;
         }
       } catch (err) {
@@ -1541,7 +1833,7 @@ function () {
   }, {
     key: "removeClass",
     value: function removeClass(els, className) {
-      if (els instanceof HTMLElement) els = [els];
+      if (this.checkType("DOMElement", els)) els = [els];
       var _iteratorNormalCompletion2 = true;
       var _didIteratorError2 = false;
       var _iteratorError2 = undefined;
@@ -1549,7 +1841,7 @@ function () {
       try {
         for (var _iterator2 = els[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
           var el = _step2.value;
-          if (!(el instanceof HTMLElement)) throw new Error();
+          if (!this.checkType("DOMElement", el)) throw new Error();
           el.classList.remove(className);
         }
       } catch (err) {
@@ -1573,9 +1865,9 @@ function () {
     key: "on",
     value: function on(els, event, callback) {
       if (!els) throw new Error();
-      if (toString.call(els) !== '[object Array]' && toString.call(els) !== '[object NodeList]') els = [els];
-      if (toString.call(event) !== '[object String]') throw new Error('Type error: `event` has to be a string');
-      if (toString.call(callback) !== '[object Function]') throw new Error('Type error: `callback` has to be a function');
+      if (!this.checkType("array", els) && !this.checkType("NodeList", els)) els = [els];
+      if (!this.checkType("string", event)) throw new Error('Type error: `event` has to be a string');
+      if (!this.checkType("function", callback)) throw new Error('Type error: `callback` has to be a function');
 
       for (var i = 0; i < els.length; i++) {
         if (els[i].addEventListener) {
@@ -1584,6 +1876,24 @@ function () {
       }
 
       return els;
+    }
+  }, {
+    key: "createEl",
+    value: function createEl(parent, tagName, className) {
+      var el = document.createElement(tagName);
+      this.addClass(el, className);
+      parent.appendChild(el);
+      return el;
+    }
+  }, {
+    key: "checkType",
+    value: function checkType(name, target) {
+      var types = _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(_typeCollection_defaultTypes__WEBPACK_IMPORTED_MODULE_3__["defaultTypes"]);
+
+      var validator = types.filter(function (v) {
+        return v.name === name;
+      })[0];
+      return validator.evaluator(target);
     }
   }]);
 
@@ -1608,6 +1918,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Helpers */ "./src/js/util/Helpers.js");
+
 
 
 
@@ -1616,52 +1928,35 @@ var Registry =
 function () {
   function Registry() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Registry);
+
+    this.H = new _Helpers__WEBPACK_IMPORTED_MODULE_2__["Helpers"]();
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Registry, [{
     key: "define",
-    value: function define(_ref) {
-      var name = _ref.name,
-          evaluator = _ref.evaluator;
-      if (toString.call(name) !== "[object String]") throw new Error();
-      if (toString.call(evaluator) !== "[object Function]") throw new Error();
-      this.definition[name] = evaluator;
-      return this;
-    }
-  }, {
-    key: "validate",
-    value: function validate(_ref2) {
-      var name = _ref2.name,
-          target = _ref2.target;
-      if (toString.call(name) !== "[object String]") throw new Error();
-      if (!this.definition[name]) throw new Error();
-      return this.definition[name](target);
-    }
-  }, {
-    key: "defineMultiple",
-    value: function defineMultiple(values) {
+    value: function define(values) {
       var _this = this;
 
-      if (toString.call(values) !== "[object Array]") throw new Error();
+      if (!this.H.checkType('array', values)) throw new Error();
       values.forEach(function (v) {
-        if (toString.call(v) === "[object Object]") _this.define(v);
+        if (_this.H.checkType('object', v)) _this.definition[v.name] = v.evaluator;
       });
       return this.definition;
     }
   }, {
-    key: "validateMultiple",
-    value: function validateMultiple(values) {
+    key: "validate",
+    value: function validate(values) {
       var _this2 = this;
 
-      if (toString.call(values) !== "[object Array]") throw new Error();
+      if (!this.H.checkType('array', values)) values = [values];
       values.forEach(function (value) {
-        if (toString.call(value.name) === '[object Array]') {
+        if (_this2.H.checkType('array', value.name)) {
           var result = value.name.some(function (n) {
             return _this2.definition[n](value.target);
           });
           if (!result) throw new Error();
         } else {
-          if (!_this2.validate(value)) throw new Error();
+          if (!_this2.definition[value.name](value.target)) throw new Error();
         }
       });
       return true;
@@ -1696,6 +1991,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
 /* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _Registry_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Registry.js */ "./src/js/util/Registry.js");
+/* harmony import */ var _Aop__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Aop */ "./src/js/util/Aop.js");
+/* harmony import */ var _Helpers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Helpers */ "./src/js/util/Helpers.js");
+
+
 
 
 
@@ -1708,36 +2007,36 @@ var Type =
 function (_Registry) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Type, _Registry);
 
-  function Type(aop) {
+  function Type() {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Type);
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Type).call(this));
     _this.definition = {};
-    _this.aop = aop;
+    _this.aop = new _Aop__WEBPACK_IMPORTED_MODULE_6__["Aop"]();
+    _this.H = new _Helpers__WEBPACK_IMPORTED_MODULE_7__["Helpers"]();
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Type, [{
     key: "addDefinition",
     value: function addDefinition(validator) {
-      var type = toString.call(validator);
-      if (type !== '[object Object]' || type !== '[object Array]') new Error();
-      if (type === '[object Object]') validator = [validator];
-      this.defineMultiple(validator);
+      if (!this.H.checkType('object', validator) && !this.H.checkType('array', validator)) throw new Error();
+      if (this.H.checkType('object', validator)) validator = [validator];
+      this.define(validator);
       return this;
     }
   }, {
-    key: "checkArgs",
-    value: function checkArgs(targetObj, targetFn, checkNames) {
-      if (toString.call(targetObj) !== "[object Object]") throw new Error();
-      if (toString.call(targetFn) !== "[object String]") throw new Error();
-      if (toString.call(checkNames) !== "[object Array]") throw new Error();
+    key: "checkArgsTypes",
+    value: function checkArgsTypes(targetObj, targetFn, checkNames) {
+      if (!this.H.checkType('object', targetObj)) throw new Error();
+      if (!this.H.checkType('string', targetFn)) throw new Error();
+      if (!this.H.checkType('array', checkNames)) throw new Error();
       var self = this;
       this.aop.inject(targetObj, targetFn, function (target) {
         var values = self.makeValues(checkNames, target);
-        self.validateMultiple(values);
+        self.validate(values);
         return target.fn.apply(this, target.args);
       });
       return this;
@@ -1755,11 +2054,11 @@ function (_Registry) {
       return values;
     }
   }, {
-    key: "checkResult",
-    value: function checkResult(targetObj, targetFn, checkName) {
-      if (toString.call(targetObj) !== "[object Object]") throw new Error();
-      if (toString.call(targetFn) !== "[object String]") throw new Error();
-      if (toString.call(checkName) !== "[object String]") throw new Error();
+    key: "checkReturnedValueType",
+    value: function checkReturnedValueType(targetObj, targetFn, checkName) {
+      if (!this.H.checkType('object', targetObj)) throw new Error();
+      if (!this.H.checkType('string', targetFn)) throw new Error();
+      if (!this.H.checkType('string', checkName)) throw new Error();
       var self = this;
       this.aop.inject(targetObj, targetFn, function (target) {
         var result = target.fn.apply(this, target.args);
@@ -1775,6 +2074,44 @@ function (_Registry) {
 
   return Type;
 }(_Registry_js__WEBPACK_IMPORTED_MODULE_5__["Registry"]);
+
+
+
+/***/ }),
+
+/***/ "./src/js/util/ajax.js":
+/*!*****************************!*\
+  !*** ./src/js/util/ajax.js ***!
+  \*****************************/
+/*! exports provided: ajax */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ajax", function() { return ajax; });
+function ajax(_ref) {
+  var httpMethod = _ref.httpMethod,
+      url = _ref.url;
+  var successReadyState = 4;
+  var successStatus = 200;
+  return new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === successReadyState) {
+        if (xhr.status === successStatus) {
+          var resp = JSON.parse(this.responseText);
+          resolve(resp);
+        } else {
+          reject(new Error());
+        }
+      }
+    };
+
+    xhr.open(httpMethod, url);
+    xhr.send();
+  });
+}
 
 
 
@@ -1823,6 +2160,10 @@ var defaultTypes = function () {
     return target instanceof HTMLElement;
   };
 
+  var isHtmlCol = function isHtmlCol(target) {
+    return toString.call(target) === "[object HTMLCollection]";
+  };
+
   var isNodeList = function isNodeList(target) {
     return target instanceof NodeList;
   };
@@ -1851,6 +2192,9 @@ var defaultTypes = function () {
   }, {
     name: 'DOMElement',
     evaluator: isHtmlEl
+  }, {
+    name: 'HTMLCollection',
+    evaluator: isHtmlCol
   }, {
     name: 'NodeList',
     evaluator: isNodeList
@@ -1890,13 +2234,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_PrimeDelivery_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_images_PrimeDelivery_png__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _images_video_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./images/video.jpg */ "./src/images/video.jpg");
 /* harmony import */ var _images_video_jpg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_images_video_jpg__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _font_AmazonEmber_300_woff__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./font/AmazonEmber_300.woff */ "./src/font/AmazonEmber_300.woff");
-/* harmony import */ var _font_AmazonEmber_300_woff__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_font_AmazonEmber_300_woff__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _font_AmazonEmber_400_woff2__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./font/AmazonEmber_400.woff2 */ "./src/font/AmazonEmber_400.woff2");
-/* harmony import */ var _font_AmazonEmber_400_woff2__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_font_AmazonEmber_400_woff2__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _font_AmazonEmber_700_woff2__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./font/AmazonEmber_700.woff2 */ "./src/font/AmazonEmber_700.woff2");
-/* harmony import */ var _font_AmazonEmber_700_woff2__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_font_AmazonEmber_700_woff2__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _js_app_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./js/app.js */ "./src/js/app.js");
+/* harmony import */ var _images_video1_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./images/video1.jpg */ "./src/images/video1.jpg");
+/* harmony import */ var _images_video1_jpg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_images_video1_jpg__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _images_video2_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./images/video2.jpg */ "./src/images/video2.jpg");
+/* harmony import */ var _images_video2_jpg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_images_video2_jpg__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _images_video3_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./images/video3.jpg */ "./src/images/video3.jpg");
+/* harmony import */ var _images_video3_jpg__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_images_video3_jpg__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _font_AmazonEmber_300_woff__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./font/AmazonEmber_300.woff */ "./src/font/AmazonEmber_300.woff");
+/* harmony import */ var _font_AmazonEmber_300_woff__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_font_AmazonEmber_300_woff__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _font_AmazonEmber_400_woff2__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./font/AmazonEmber_400.woff2 */ "./src/font/AmazonEmber_400.woff2");
+/* harmony import */ var _font_AmazonEmber_400_woff2__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_font_AmazonEmber_400_woff2__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _font_AmazonEmber_700_woff2__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./font/AmazonEmber_700.woff2 */ "./src/font/AmazonEmber_700.woff2");
+/* harmony import */ var _font_AmazonEmber_700_woff2__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_font_AmazonEmber_700_woff2__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _js_app_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./js/app.js */ "./src/js/app.js");
+
+
+
 
 
 

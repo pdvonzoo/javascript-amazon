@@ -6,7 +6,7 @@
         <title>amazon</title>
         <meta name="description" content="amazon copy site">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style/main.css">
+        <link rel="stylesheet" href="./main.css">
     </head>
     <body>
         <header class="header">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="header__banner-box">
                     <a href="#none">
-                        <img src="./images/TodaysDeals.png" alt="Learn More">
+                        <img src="/images/TodaysDeals.png" alt="Learn More">
                     </a>
                 </div>
                 <nav class="header__nation-box">
@@ -106,9 +106,9 @@
                     <div class="fixed-nav__submit">
                         <form class="submit-form">
                             <div class="submit-form__header">
-                                <img class="logo" src="./images/Logo_Prime.png" alt="prime logo">
+                                <img class="logo" src="/images/Logo_Prime.png" alt="prime logo">
                                 <h2 class="heading-2">There's something for everyone</h2>
-                                <img class="plan-img" src="./images/GBB_Illustration.png" alt="plan-img">
+                                <img class="plan-img" src="/images/GBB_Illustration.png" alt="plan-img">
                                 <div class="close-btn" data-close="fixedNav">CLOSE
                                     <div class="close-btn__icon"></div>
                                 </div>
@@ -226,12 +226,12 @@
                 <div class="fixed-nav__cover fixed-nav__cover--front">
                     <div class="fixed-nav__front">
                         <div class="logo-box">
-                            <img src="./images/PrimeLogo_Blue.svg" alt="prime logo">
+                            <img src="/images/PrimeLogo_Blue.svg" alt="prime logo">
                         </div>
                         <div class="scroll-box" data-open="fixedNav">
                             <p class="scroll-text">See more plans</p>
                             <div class="scroll-btn">
-                                <img src="./images/DownArrow.svg" alt="Button for viewing more plans">
+                                <img src="/images/DownArrow.svg" alt="Button for viewing more plans">
                             </div>
                         </div>
                         <div class="submit-box">
@@ -255,7 +255,7 @@
                             <p class="prime-about--more__text">See more plans</p>
                             <span class="prime-about--more__icon"></span>
                         </div>
-                        <img class="prime-about__logo" src="./images/logo_prime_about.svg" alt="prime logo">
+                        <img class="prime-about__logo" src="/images/logo_prime_about.svg" alt="prime logo">
                     </div>
                 </section>
                 <section  class="prime-detail">
@@ -331,20 +331,17 @@
                     <section class="prime-more--Video">
                         <div class="carousel">
                             <div class="carousel__arrow-box carousel__left">
-                                <span class="arrow-icon"></span>
+                                <span class="arrow-icon" id="exploreVideoPrev"></span>
                             </div>
-                            <ul class="carousel__list">
-                                <li class="carousel__item">
-
-                                </li>
+                            <ul class="carousel__list" id="exploreVideo">
                             </ul>
                             <div class="carousel__arrow-box carousel__right">
-                                <span class="arrow-icon"></span>
+                                <span class="arrow-icon" id="exploreVideoNext"></span>
                             </div>
                         </div>
                         <div class="text-box">
-                            <div class="text-box__heading">Prime Originals, exclusively on Prime Video</div>
-                            <p class="text-box__paragraph">Prime Video is the only place where you can watch Prime Original series like "The Marvelous Mrs. Maisel", "Tom Clancy's Jack Ryan", "Homecoming", and "The Man in the High Castle".</p>
+                            <div class="text-box__heading" id="c-heading">Prime Originals, exclusively on Prime Video</div>
+                            <p class="text-box__paragraph" id="c-paragraph">Prime Video is the only place where you can watch Prime Original series like "The Marvelous Mrs. Maisel", "Tom Clancy's Jack Ryan", "Homecoming", and "The Man in the High Castle".</p>
                             <div class="text-box__link-box" >
                                 <a class="text-box__link" href="#none">Explore Prime Video</a>
                                 <div class="arrow-icon"></div>

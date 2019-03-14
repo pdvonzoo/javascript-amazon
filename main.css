@@ -22,8 +22,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  min-width: 100rem;
-}
+  min-width: 100rem; }
+
 .contents-wrapper {
   min-width: 100rem;
   max-width: 140rem;
@@ -981,10 +981,13 @@ html {
       .prime-more--Video .carousel__list {
         width: 100%;
         height: 100%;
-        margin: 0 auto; }
+        margin: 0 auto;
+        overflow: hidden; }
       .prime-more--Video .carousel__item {
         background: url(../images/video.jpg);
         background-size: cover; }
+        .prime-more--Video .carousel__item.transition {
+          transition: all .2s; }
       .prime-more--Video .carousel__arrow-box {
         position: relative; }
         .prime-more--Video .carousel__arrow-box .arrow-icon {
